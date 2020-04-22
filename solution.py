@@ -168,13 +168,15 @@ class q_values():
     device = 'cpu'
 
     def get_current(policy_net, states, actions):
-        states = torch.tensor(states, dtype = torch.float).to(device)
-        actions = (torch.tensor(actions).unsqueeze(-1)).argmax(dim=-1)
+        print(actions)
+        actions = (torch.tensor(actions)).long()
+
+        #actions = (torch.tensor(actions).unsqueeze(-1)).argmax(dim=-1)
         return policy_net.forward(states).gather(dim=1, index=actions.unsqueeze(-1))
 
     def get_next(target_net, next_states):
-        next_states = torch.tensor(next_states, dtype = torch.float).to(device)
-        q = policy_net.forward(next_states).detach()
+
+        q = target_net(next_states)
         q_star = q.argmax(dim=-1)
         return q.gather(dim=1, index=q_star.unsqueeze(-1))
 
@@ -197,6 +199,8 @@ for episode in range(num_episodes):
 
             experiences = memory.sample(batch_size)
             states, actions, rewards, next_states, terminal_states = extract_tensors(experiences)
+            states = torch.tensor(states, dtype=torch.float).to(device)
+            next_states = torch.tensor(next_states, dtype=torch.float).to(device)
             terminal_states = torch.tensor(terminal_states, dtype=torch.float).unsqueeze(dim=-1).to(device)
             current_q_values = q_values.get_current(policy_net, states, actions)
             rewards = torch.tensor(rewards,dtype=torch.float).unsqueeze(dim=-1).to(device)
