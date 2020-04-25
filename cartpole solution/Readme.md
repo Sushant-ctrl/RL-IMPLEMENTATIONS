@@ -8,7 +8,7 @@ For studying and implementing I have used the CartPole environment of the OpenAI
 
 ### The Task
 
-The main task is to select the action such that we can balance the pole on the cart for maximum time steps i.e. 200 for v-0.
+The main task is to select actions such that the pole remains vertical on the cart for maximum time steps i.e. 200 for v-0.
 
 ### Observation
 
@@ -36,7 +36,7 @@ Reward is 1 for every step taken, including the termination step.
 
 ## Solution
 
-The environment was solved using the **Deep Q-Learning** in the low state.Low state means the simplest possible form of state space.
+The environment is solved using the **Deep Q-Learning** in the low state.Low state means the simplest possible form of state space.
 
 Deep Q learning is a form of q learning. The `q(s,a)` values are estimated using a deep neural network as a function approximator to find the q values. This network takes in the state values as input and gives the optimal q value corresponding to all the actions as output.
 
@@ -44,9 +44,9 @@ The task then turns out to train the network to give the optimal q values  $q_*(
 
 For training two networks are used, policy net and target net. The target net produces the target, towards which the policy net is trained. The parameters of the policy net are copied into the target net after certain fixed number of episodes.
 
-Mean squared losses and ADAM optimiser technique was used to train the network.
+Mean squared losses and ADAM optimiser is used to train the network.
 
-Experience Replay was also used.
+Experience Replay is also used.
 
 
 
