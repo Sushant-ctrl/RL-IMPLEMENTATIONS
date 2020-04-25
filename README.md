@@ -1,2 +1,3 @@
 # rl
-reinforcement learning
+Reinforcement Learning
+Each folder has its own readme
