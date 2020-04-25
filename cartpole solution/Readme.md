@@ -40,7 +40,7 @@ The environment is solved using the **Deep Q-Learning** in the low state.Low sta
 
 Deep Q learning is a form of q learning. The `q(s,a)` values are estimated using a deep neural network as a function approximator to find the q values. This network takes in the state values as input and gives the optimal q value corresponding to all the actions as output.
 
-The task then turns out to train the network to give the optimal q values  $q_*(s,a)$ 
+The task then turns out to train the network to give the optimal q values  q<sub>*</sub>(s,a) 
 
 For training two networks are used, policy net and target net. The target net produces the target, towards which the policy net is trained. The parameters of the policy net are copied into the target net after certain fixed number of episodes.
 
