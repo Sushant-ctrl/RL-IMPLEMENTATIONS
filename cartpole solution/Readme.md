@@ -1,4 +1,5 @@
 # DQN LOW STATE
+###### tags: `Reinforcement Learning` , `Cartpole`, `DQN`
 
 ## THE ENVIRONMENT
 
