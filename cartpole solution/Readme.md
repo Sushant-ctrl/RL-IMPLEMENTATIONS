@@ -27,7 +27,7 @@ Mean squared loss and ADAM optimiser is used to train the network.
 
 
 
-## Training graphs and Videos
+## Results
 
 ### Trained CartPole
 
