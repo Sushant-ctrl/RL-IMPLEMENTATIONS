@@ -50,5 +50,3 @@ Mean squared loss and ADAM optimiser is used to train the network.
 * PyTorch
 * NumPy
 * Matplotlib
-* namedtuple 
-* time
