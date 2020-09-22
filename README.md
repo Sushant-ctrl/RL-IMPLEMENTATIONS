@@ -19,6 +19,6 @@ Each folder has a saperate Readme file where summary of the implemetations are g
 - [x] Policy based Mehods**
 
 
-*There are variants to dqn algorithm which are implemented [here](https://github.com/Sushant-ctrl/DQN-Algorithms))
+*There are variants to dqn algorithm which are implemented [here](https://github.com/Sushant-ctrl/DQN-Algorithms)
 
 **There are so many policy gradient based algorithms which are implemented [here](https://github.com/Sushant-ctrl/PolicyGradient-Based-RL)
